@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <button id="start">计时开始</button>
+        <p><span id="counter">Time passed: </span> </p> 
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    
+        <script>
+            var second = 0;
+            var timer = null;
+            
+            function startTime(){
+                var timing = document.getElementById("timing");
+                var display = document.getElementById("display");
+                timer = setInterval(function(){
+                    display.value = second + "秒";
+                    second++
+                },1000);
+            }
+    
+    
+            function endTime(){
+                clearInterval(timer);
+            }
+    
+            function clearTheTime(){
+                var display = document.getElementById("display");
+                display.value = 0 + "秒"
+            }
+        </script>
+    
+    </head>
+    <body>
+        <input id="display">s
+  
